@@ -19,7 +19,7 @@ void	ft_execute(char **argv, int i, int tmp_fd, char **env)
 	dup2(tmp_fd, 0);
 	close(tmp_fd);
 	execve(argv[0], argv, env);
-	ft_putstr_error("error: cannot execute", NULL);
+	ft_putstr_error("error: cannot execute ", argv[0]);
 	exit(1);
 }
 
